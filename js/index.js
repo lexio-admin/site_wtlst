@@ -94,16 +94,6 @@
                           title: "Lexio's X",
                           children: (0, s.jsx)(r.fWC, { size: 18 }),
                         }),
-                        // (0, s.jsx)("a", {
-                        //   type: "button",
-                        //   href: "https://discord.gg/GQzV8BxDnn",
-                        //   className:
-                        //     "bg-niteGray p-3 rounded-xl flex justify-center items-center aspect-square bg-opacity-50",
-                        //   target: "_blank",
-                        //   rel: "noopener noreferrer",
-                        //   title: "Discord Server Nite",
-                        //   children: (0, s.jsx)(r.j2d, { size: 20 }),
-                        // }),
                       ],
                     }),
                   }),
@@ -145,7 +135,7 @@
                         className: "relative w-12 h-12 shadow-md rounded-xl",
                         children: (0, s.jsx)(n(), {
                           className: "rounded-xl",
-                          src: "/media/logo.svg",
+                          src: "media/logo.svg",
                           fill: !0,
                           alt: "LexioLogo",
                           title: "Lexio Logo",
@@ -357,23 +347,6 @@
                 "mt-6 bg-niteGray py-3 px-5 rounded-full font-medium text-sm inline-flex items-center mb-16 md:mb-20 bg-opacity-50 focus:outline-none hover:bg-[#EEEEEE] hover:text-[#404040] transition-all duration-200 ease-linear",
               children: ["Explore ", (0, s.jsx)(r.m, { className: "ml-2" })],
             }),
-            // (0, s.jsx)("div", {
-            //   className: "w-full flex justify-center",
-            //   children: (0, s.jsxs)("video", {
-            //     controls: !0,
-            //     autoPlay: !0,
-            //     muted: !0,
-            //     preload: "none",
-            //     className: "rounded-2xl w-full focus:outline-none",
-            //     children: [
-            //       (0, s.jsx)("source", {
-            //         src: "../media/trailer.mp4",
-            //         type: "video/mp4",
-            //       }),
-            //       "Sorry, your browser doesn't support videos.",
-            //     ],
-            //   }),
-            // }),
             (0, s.jsx)("div", { ref: e }),
             (0, s.jsxs)("div", {
               className:
@@ -473,14 +446,6 @@
                             "Adopt effective study habits with Lexio. Get personalized tips to improve your academic performance and transform your study routine.",
                           ],
                         }),
-                        // (0, s.jsx)(h(), {
-                        //   src: "/media/1.svg",
-                        //   className: "w-2/3 h-auto mt-4",
-                        //   alt: "Habit List Render",
-                        //   title: "Habit List Render",
-                        //   width: 500,
-                        //   height: 300,
-                        // }),
                       ],
                     }),
                     (0, s.jsxs)("div", {
@@ -499,14 +464,6 @@
                             "Harness AI for enhanced study sessions. Lexio generates questions, transcriptions, and flashcards automatically, boosting learning efficiency.",
                           ],
                         }),
-                        // (0, s.jsx)(h(), {
-                        //   src: "/media/1.svg",
-                        //   className: "w-2/3 h-auto mt-4",
-                        //   alt: "Habit List Render",
-                        //   title: "Habit List Render",
-                        //   width: 500,
-                        //   height: 300,
-                        // }),
                       ],
                     }),
                   ],
@@ -679,16 +636,6 @@
               className: "flex justify-center font-[inter] bg-opacity-60 z-10",
               children: (0, s.jsx)(b, {}),
             }),
-            // (0, s.jsx)(w(), {
-            //   async: !0,
-            //   src: "https://www.googletagmanager.com/gtag/js?id=G-F2Y2Z3Y97Z",
-            // }),
-            // (0, s.jsx)(w(), {
-            //   id: "google-analytics",
-            //   strategy: "afterInteractive",
-            //   children:
-            //     "\n          window.dataLayer = window.dataLayer || [];\n          function gtag(){dataLayer.push(arguments);}\n          gtag('js', new Date());\n        \n          gtag('config', 'G-F2Y2Z3Y97Z');\n        ",
-            // }),
           ],
         });
       var E = N;
