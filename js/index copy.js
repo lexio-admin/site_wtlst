@@ -262,7 +262,7 @@
 
                 // Invia l'email di conferma
                 try {
-                  const response = await fetch("api/sendgrid", {
+                  const response = await fetch("http://localhost:3000/api/sendgrid", {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify({
