@@ -68,7 +68,7 @@
                           type: "button",
                           href: "mailto:support@lexio.me?body=Ciao! I'm interested in Lexio.",
                           className:
-                            "bg-niteGray p-3 rounded-xl bg-opacity-50 flex justify-center items-center aspect-square",
+                            "bg-lexioGray p-3 rounded-xl bg-opacity-50 flex justify-center items-center aspect-square",
                           target: "_blank",
                           rel: "noopener noreferrer",
                           title: "Lexio's Email",
@@ -78,7 +78,7 @@
                           type: "button",
                           href: "https://www.instagram.com/lexioapp/",
                           className:
-                            "bg-niteGray p-3 rounded-xl flex justify-center items-center aspect-square bg-opacity-50",
+                            "bg-lexioGray p-3 rounded-xl flex justify-center items-center aspect-square bg-opacity-50",
                           target: "_blank",
                           rel: "noopener noreferrer",
                           title: "Lexio's Instagram",
@@ -88,7 +88,7 @@
                           type: "button",
                           href: "https://x.com/lexio_app",
                           className:
-                            "bg-niteGray p-3 rounded-xl flex justify-center items-center aspect-square bg-opacity-50",
+                            "bg-lexioGray p-3 rounded-xl flex justify-center items-center aspect-square bg-opacity-50",
                           target: "_blank",
                           rel: "noopener noreferrer",
                           title: "Lexio's X",
@@ -98,7 +98,7 @@
                         //   type: "button",
                         //   href: "https://discord.gg/GQzV8BxDnn",
                         //   className:
-                        //     "bg-niteGray p-3 rounded-xl flex justify-center items-center aspect-square bg-opacity-50",
+                        //     "bg-lexioGray p-3 rounded-xl flex justify-center items-center aspect-square bg-opacity-50",
                         //   target: "_blank",
                         //   rel: "noopener noreferrer",
                         //   title: "Discord Server Nite",
@@ -162,7 +162,7 @@
                     className: "flex justify-end",
                     children: (0, s.jsx)("button", {
                       className:
-                        "bg-niteGray py-3 px-5 rounded-full font-medium bg-opacity-50 text-sm focus:outline-none transition-all duration-200 ease-linear hover:text-[#404040] hover:bg-[#f0f0f0]",
+                        "bg-lexioGray py-3 px-5 rounded-full font-medium bg-opacity-50 text-sm focus:outline-none transition-all duration-200 ease-linear hover:text-[#404040] hover:bg-[#f0f0f0]",
                       onClick: e.refDiv
                         ? l
                         : () => {
@@ -320,7 +320,7 @@
               A(e.target.value)
                 ? (f("opacity-100 -translate-x-0"),
                   y("pr-12 bg-gradient-to-r from-[#eec0a950] to-[#e2b0c050]"))
-                : (f("opacity-0 -translate-x-8"), y("pr-8 bg-niteGray"));
+                : (f("opacity-0 -translate-x-8"), y("pr-8 bg-lexioGray"));
           },
           A = () => /\S+@\S+\.\S+/.test(l);
         return (0, s.jsxs)("main", {
@@ -354,7 +354,7 @@
             (0, s.jsxs)("button", {
               onClick: S,
               className:
-                "mt-6 bg-niteGray py-3 px-5 rounded-full font-medium text-sm inline-flex items-center mb-16 md:mb-20 bg-opacity-50 focus:outline-none hover:bg-[#EEEEEE] hover:text-[#404040] transition-all duration-200 ease-linear",
+                "mt-6 bg-lexioGray py-3 px-5 rounded-full font-medium text-sm inline-flex items-center mb-16 md:mb-20 bg-opacity-50 focus:outline-none hover:bg-[#EEEEEE] hover:text-[#404040] transition-all duration-200 ease-linear",
               children: ["Explore ", (0, s.jsx)(r.m, { className: "ml-2" })],
             }),
             // (0, s.jsx)("div", {
@@ -434,7 +434,7 @@
                   children: [
                     (0, s.jsxs)("div", {
                       className:
-                        "transform-gpu transition-all hover:scale-95 bg-niteGray w-full h-auto bg-opacity-50 rounded-2xl py-8 grid place-items-center mb-5 px-8",
+                        "transform-gpu transition-all hover:scale-95 bg-lexioGray w-full h-auto bg-opacity-50 rounded-2xl py-8 grid place-items-center mb-5 px-8",
                       children: [
                         (0, s.jsx)("p", {
                           className:
@@ -459,7 +459,7 @@
                     }),
                     (0, s.jsxs)("div", {
                       className:
-                        "transform-gpu transition-all hover:scale-95 bg-niteGray w-full h-auto bg-opacity-50 rounded-2xl py-8 grid place-items-center mb-3 px-8",
+                        "transform-gpu transition-all hover:scale-95 bg-lexioGray w-full h-auto bg-opacity-50 rounded-2xl py-8 grid place-items-center mb-3 px-8",
                       children: [
                         (0, s.jsx)("p", {
                           className:
@@ -485,7 +485,7 @@
                     }),
                     (0, s.jsxs)("div", {
                       className:
-                        "transform-gpu transition-all hover:scale-95 bg-niteGray w-full h-auto bg-opacity-50 rounded-2xl py-8 grid place-items-center mb-3 px-8",
+                        "transform-gpu transition-all hover:scale-95 bg-lexioGray w-full h-auto bg-opacity-50 rounded-2xl py-8 grid place-items-center mb-3 px-8",
                       children: [
                         (0, s.jsx)("p", {
                           className:
@@ -515,7 +515,7 @@
                   className: "flex flex-col w-full h-auto m-0",
                   children: (0, s.jsxs)("div", {
                     className:
-                      "transform-gpu transition-all hover:scale-95 bg-niteGray w-full h-full bg-opacity-50 sm:h-full rounded-2xl py-8 flex flex-col mb-3 px-8",
+                      "transform-gpu transition-all hover:scale-95 bg-lexioGray w-full h-full bg-opacity-50 sm:h-full rounded-2xl py-8 flex flex-col mb-3 px-8",
                     children: [
                       (0, s.jsxs)("p", {
                         className:
@@ -592,7 +592,7 @@
                             type: "button",
                             href: "https://app.lexio.me", // tumor
                             className:
-                              "max-w-max outline-none sm:w-1/4 flex justify-center mt-6 bg-niteGray py-3 px-6 rounded-full size-4xl font-medium items-center mb-16 md:mb-20 bg-opacity-50 hover:bg-[#EEEEEE] hover:text-[#555555] transition-all duration-200 ease-linear cursor-pointer",
+                              "max-w-max outline-none sm:w-1/4 flex justify-center mt-6 bg-lexioGray py-3 px-6 rounded-full size-4xl font-medium items-center mb-16 md:mb-20 bg-opacity-50 hover:bg-[#EEEEEE] hover:text-[#555555] transition-all duration-200 ease-linear cursor-pointer",
                             target: "_blank",
                             rel: "noopener noreferrer",
                             children: (0, s.jsx)("p", {
@@ -619,7 +619,7 @@
                           }),
                           (0, s.jsxs)("button", {
                             className:
-                              "relative outline-none flex justify-center mt-6 bg-niteGray py-3 px-8 rounded-full font-semibold items-center mb-16 md:mb-20 bg-opacity-50 hover:bg-[#EEEEEE] hover:text-[#555555] transition-all duration-200 ease-linear ".concat(
+                              "relative outline-none flex justify-center mt-6 bg-lexioGray py-3 px-8 rounded-full font-semibold items-center mb-16 md:mb-20 bg-opacity-50 hover:bg-[#EEEEEE] hover:text-[#555555] transition-all duration-200 ease-linear ".concat(
                                 b
                               ),
                             disabled: j,

@@ -68,7 +68,7 @@
                           type: "button",
                           href: "mailto:support@lexio.me?body=Ciao! I'm interested in Lexio.",
                           className:
-                            "bg-niteGray p-3 rounded-xl bg-opacity-50 flex justify-center items-center aspect-square",
+                            "bg-lexioGray p-3 rounded-xl bg-opacity-50 flex justify-center items-center aspect-square",
                           target: "_blank",
                           rel: "noopener noreferrer",
                           title: "Lexio's Email",
@@ -78,7 +78,7 @@
                           type: "button",
                           href: "https://www.instagram.com/lexioapp/",
                           className:
-                            "bg-niteGray p-3 rounded-xl flex justify-center items-center aspect-square bg-opacity-50",
+                            "bg-lexioGray p-3 rounded-xl flex justify-center items-center aspect-square bg-opacity-50",
                           target: "_blank",
                           rel: "noopener noreferrer",
                           title: "Lexio's Instagram",
@@ -88,22 +88,12 @@
                           type: "button",
                           href: "https://x.com/lexio_app",
                           className:
-                            "bg-niteGray p-3 rounded-xl flex justify-center items-center aspect-square bg-opacity-50",
+                            "bg-lexioGray p-3 rounded-xl flex justify-center items-center aspect-square bg-opacity-50",
                           target: "_blank",
                           rel: "noopener noreferrer",
                           title: "Lexio's X",
                           children: (0, s.jsx)(r.fWC, { size: 18 }),
                         }),
-                        // (0, s.jsx)("a", {
-                        //   type: "button",
-                        //   href: "https://discord.gg/GQzV8BxDnn",
-                        //   className:
-                        //     "bg-niteGray p-3 rounded-xl flex justify-center items-center aspect-square bg-opacity-50",
-                        //   target: "_blank",
-                        //   rel: "noopener noreferrer",
-                        //   title: "Discord Server Nite",
-                        //   children: (0, s.jsx)(r.j2d, { size: 20 }),
-                        // }),
                       ],
                     }),
                   }),
@@ -145,7 +135,7 @@
                         className: "relative w-12 h-12 shadow-md rounded-xl",
                         children: (0, s.jsx)(n(), {
                           className: "rounded-xl",
-                          src: "/media/logo.svg",
+                          src: "media/logo.svg",
                           fill: !0,
                           alt: "LexioLogo",
                           title: "Lexio Logo",
@@ -162,7 +152,7 @@
                     className: "flex justify-end",
                     children: (0, s.jsx)("button", {
                       className:
-                        "bg-niteGray py-3 px-5 rounded-full font-medium bg-opacity-50 text-sm focus:outline-none transition-all duration-200 ease-linear hover:text-[#404040] hover:bg-[#f0f0f0]",
+                        "bg-lexioGray py-3 px-5 rounded-full font-medium bg-opacity-50 text-sm focus:outline-none transition-all duration-200 ease-linear hover:text-[#404040] hover:bg-[#f0f0f0]",
                       onClick: e.refDiv
                         ? l
                         : () => {
@@ -197,7 +187,7 @@
         x = l(3977),
         d = l(1019),
         m = l(3454);
-      let u = (0, x.ZF)({ // tumor firebase
+      let u = (0, x.ZF)({
           apiKey: m.env.GATSBY_API_KEY,
           authDomain: m.env.GATSBY_AUTH_DOMAIN,
           databaseURL: "https://lexio-waitlist-default-rtdb.europe-west1.firebasedatabase.app",
@@ -205,7 +195,6 @@
           storageBucket: m.env.GATSBY_STORAGE_BUCKET,
           messagingSenderId: m.env.GATSBY_MESSAGING_SENDER_ID,
           appId: m.env.GATSBY_APP_ID,
-          // measurementId: m.env.GATSBY_MEASUREMENT_ID,
         }),
         p = (0, d.N8)(u);
       var f = l(5675),
@@ -251,7 +240,6 @@
               if (!t.includes(l)) {
                 console.log("Saving new email:", l);
                 
-                // Salva l'email nel database con mailSent: false
                 const newEmailRef = await (0, d.VF)((0, d.iH)(p, "/"), {
                   email: l,
                   date: new Date().toISOString().split("T")[0],
@@ -260,7 +248,6 @@
 
                 console.log("Email saved to database with key:", newEmailRef.key);
 
-                // Invia l'email di conferma
                 try {
                   const response = await fetch("api/sendgrid", {
                     method: "POST",
@@ -274,7 +261,6 @@
                   if (response.ok) {
                     console.log("Confirmation email sent successfully");
                     
-                  // Aggiorna il record nel database impostando mailSent: true
                   try {
                     await (0, d.VF)((0, d.iH)(p, `${newEmailRef.key}`), {
                       mailSent: true
@@ -282,7 +268,6 @@
                     
                     console.log("Database updated: mailSent set to true");
 
-                    // Verifica che l'aggiornamento sia stato effettivamente applicato
                     const updatedSnapshot = await (0, d.c)((0, d.iH)(p, `${newEmailRef.key}`));
                     const updatedData = updatedSnapshot.val();
                     console.log("Updated data in database:", updatedData);
@@ -304,7 +289,6 @@
                 console.log("Email already exists, not saving:", l);
               }
 
-              // Mostra il messaggio di successo
               console.log("Email submission processed successfully");
               n("");
               v(true);
@@ -320,7 +304,7 @@
               A(e.target.value)
                 ? (f("opacity-100 -translate-x-0"),
                   y("pr-12 bg-gradient-to-r from-[#eec0a950] to-[#e2b0c050]"))
-                : (f("opacity-0 -translate-x-8"), y("pr-8 bg-niteGray"));
+                : (f("opacity-0 -translate-x-8"), y("pr-8 bg-lexioGray"));
           },
           A = () => /\S+@\S+\.\S+/.test(l);
         return (0, s.jsxs)("main", {
@@ -354,26 +338,9 @@
             (0, s.jsxs)("button", {
               onClick: S,
               className:
-                "mt-6 bg-niteGray py-3 px-5 rounded-full font-medium text-sm inline-flex items-center mb-16 md:mb-20 bg-opacity-50 focus:outline-none hover:bg-[#EEEEEE] hover:text-[#404040] transition-all duration-200 ease-linear",
+                "mt-6 bg-lexioGray py-3 px-5 rounded-full font-medium text-sm inline-flex items-center mb-16 md:mb-20 bg-opacity-50 focus:outline-none hover:bg-[#EEEEEE] hover:text-[#404040] transition-all duration-200 ease-linear",
               children: ["Explore ", (0, s.jsx)(r.m, { className: "ml-2" })],
             }),
-            // (0, s.jsx)("div", {
-            //   className: "w-full flex justify-center",
-            //   children: (0, s.jsxs)("video", {
-            //     controls: !0,
-            //     autoPlay: !0,
-            //     muted: !0,
-            //     preload: "none",
-            //     className: "rounded-2xl w-full focus:outline-none",
-            //     children: [
-            //       (0, s.jsx)("source", {
-            //         src: "../media/trailer.mp4",
-            //         type: "video/mp4",
-            //       }),
-            //       "Sorry, your browser doesn't support videos.",
-            //     ],
-            //   }),
-            // }),
             (0, s.jsx)("div", { ref: e }),
             (0, s.jsxs)("div", {
               className:
@@ -434,7 +401,7 @@
                   children: [
                     (0, s.jsxs)("div", {
                       className:
-                        "transform-gpu transition-all hover:scale-95 bg-niteGray w-full h-auto bg-opacity-50 rounded-2xl py-8 grid place-items-center mb-5 px-8",
+                        "transform-gpu transition-all hover:scale-95 bg-lexioGray w-full h-auto bg-opacity-50 rounded-2xl py-8 grid place-items-center mb-5 px-8",
                       children: [
                         (0, s.jsx)("p", {
                           className:
@@ -448,7 +415,7 @@
                             "We provide our services on many different platforms, starting from a Web app, a mobile platform and soon even on a desktop application.",
                         }),
                         (0, s.jsx)(h(), {
-                          src: "/media/macFirst.svg",
+                          src: "media/macFirst.svg",
                           className: "w-1/2 h-auto mt-4",
                           alt: "MacBook Render",
                           title: "MacBook Render",
@@ -459,7 +426,7 @@
                     }),
                     (0, s.jsxs)("div", {
                       className:
-                        "transform-gpu transition-all hover:scale-95 bg-niteGray w-full h-auto bg-opacity-50 rounded-2xl py-8 grid place-items-center mb-3 px-8",
+                        "transform-gpu transition-all hover:scale-95 bg-lexioGray w-full h-auto bg-opacity-50 rounded-2xl py-8 grid place-items-center mb-3 px-8",
                       children: [
                         (0, s.jsx)("p", {
                           className:
@@ -473,19 +440,11 @@
                             "Adopt effective study habits with Lexio. Get personalized tips to improve your academic performance and transform your study routine.",
                           ],
                         }),
-                        // (0, s.jsx)(h(), {
-                        //   src: "/media/1.svg",
-                        //   className: "w-2/3 h-auto mt-4",
-                        //   alt: "Habit List Render",
-                        //   title: "Habit List Render",
-                        //   width: 500,
-                        //   height: 300,
-                        // }),
                       ],
                     }),
                     (0, s.jsxs)("div", {
                       className:
-                        "transform-gpu transition-all hover:scale-95 bg-niteGray w-full h-auto bg-opacity-50 rounded-2xl py-8 grid place-items-center mb-3 px-8",
+                        "transform-gpu transition-all hover:scale-95 bg-lexioGray w-full h-auto bg-opacity-50 rounded-2xl py-8 grid place-items-center mb-3 px-8",
                       children: [
                         (0, s.jsx)("p", {
                           className:
@@ -499,14 +458,6 @@
                             "Harness AI for enhanced study sessions. Lexio generates questions, transcriptions, and flashcards automatically, boosting learning efficiency.",
                           ],
                         }),
-                        // (0, s.jsx)(h(), {
-                        //   src: "/media/1.svg",
-                        //   className: "w-2/3 h-auto mt-4",
-                        //   alt: "Habit List Render",
-                        //   title: "Habit List Render",
-                        //   width: 500,
-                        //   height: 300,
-                        // }),
                       ],
                     }),
                   ],
@@ -515,7 +466,7 @@
                   className: "flex flex-col w-full h-auto m-0",
                   children: (0, s.jsxs)("div", {
                     className:
-                      "transform-gpu transition-all hover:scale-95 bg-niteGray w-full h-full bg-opacity-50 sm:h-full rounded-2xl py-8 flex flex-col mb-3 px-8",
+                      "transform-gpu transition-all hover:scale-95 bg-lexioGray w-full h-full bg-opacity-50 sm:h-full rounded-2xl py-8 flex flex-col mb-3 px-8",
                     children: [
                       (0, s.jsxs)("p", {
                         className:
@@ -534,7 +485,7 @@
                           "flex justify-center items-center flex-grow",
                         children: [
                           (0, s.jsx)("img", {
-                            src: "/media/notesThird.svg",
+                            src: "media/notesThird.svg",
                             className: "w-full sm:w-full h-auto mt-10 sm:mt-15",
                             alt: "Notes Render",
                             title: "Notes Render",
@@ -590,9 +541,9 @@
                           }),
                           (0, s.jsx)("a", {
                             type: "button",
-                            href: "https://app.lexio.me", // tumor
+                            href: "https://app.lexio.me",
                             className:
-                              "max-w-max outline-none sm:w-1/4 flex justify-center mt-6 bg-niteGray py-3 px-6 rounded-full size-4xl font-medium items-center mb-16 md:mb-20 bg-opacity-50 hover:bg-[#EEEEEE] hover:text-[#555555] transition-all duration-200 ease-linear cursor-pointer",
+                              "max-w-max outline-none sm:w-1/4 flex justify-center mt-6 bg-lexioGray py-3 px-6 rounded-full size-4xl font-medium items-center mb-16 md:mb-20 bg-opacity-50 hover:bg-[#EEEEEE] hover:text-[#555555] transition-all duration-200 ease-linear cursor-pointer",
                             target: "_blank",
                             rel: "noopener noreferrer",
                             children: (0, s.jsx)("p", {
@@ -619,7 +570,7 @@
                           }),
                           (0, s.jsxs)("button", {
                             className:
-                              "relative outline-none flex justify-center mt-6 bg-niteGray py-3 px-8 rounded-full font-semibold items-center mb-16 md:mb-20 bg-opacity-50 hover:bg-[#EEEEEE] hover:text-[#555555] transition-all duration-200 ease-linear ".concat(
+                              "relative outline-none flex justify-center mt-6 bg-lexioGray py-3 px-8 rounded-full font-semibold items-center mb-16 md:mb-20 bg-opacity-50 hover:bg-[#EEEEEE] hover:text-[#555555] transition-all duration-200 ease-linear ".concat(
                                 b
                               ),
                             disabled: j,
@@ -679,16 +630,6 @@
               className: "flex justify-center font-[inter] bg-opacity-60 z-10",
               children: (0, s.jsx)(b, {}),
             }),
-            // (0, s.jsx)(w(), {
-            //   async: !0,
-            //   src: "https://www.googletagmanager.com/gtag/js?id=G-F2Y2Z3Y97Z",
-            // }),
-            // (0, s.jsx)(w(), {
-            //   id: "google-analytics",
-            //   strategy: "afterInteractive",
-            //   children:
-            //     "\n          window.dataLayer = window.dataLayer || [];\n          function gtag(){dataLayer.push(arguments);}\n          gtag('js', new Date());\n        \n          gtag('config', 'G-F2Y2Z3Y97Z');\n        ",
-            // }),
           ],
         });
       var E = N;
