@@ -195,7 +195,6 @@
           storageBucket: m.env.GATSBY_STORAGE_BUCKET,
           messagingSenderId: m.env.GATSBY_MESSAGING_SENDER_ID,
           appId: m.env.GATSBY_APP_ID,
-          measurementId: m.env.GATSBY_MEASUREMENT_ID
         }),
         p = (0, d.N8)(u);
       var f = l(5675),
@@ -633,13 +632,19 @@
             }),
             (0, s.jsx)(w(), {
               async: !0,
-              src: 'https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}',
+              src: `https://www.googletagmanager.com/gtag/js?id=${window.GATSBY_MEASUREMENT_ID || ''}`,
             }),
             (0, s.jsx)(w(), {
               id: "google-analytics",
               strategy: "afterInteractive",
-              children:
-                "\n          window.dataLayer = window.dataLayer || [];\n          function gtag(){dataLayer.push(arguments);}\n          gtag('js', new Date());\n        \n          gtag('config', '${process.env.NEXT_PUBLIC_GA_ID}');\n        ",
+              dangerouslySetInnerHTML: {
+                __html: `
+                window.dataLayer = window.dataLayer || []; 
+                function gtag(){dataLayer.push(arguments)};
+                gtag('js', new Date());
+                gtag('config', '${window.GATSBY_MEASUREMENT_ID || ''}');
+                `
+              }
             }),
           ],
         });
