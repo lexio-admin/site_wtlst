@@ -1,3 +1,7 @@
+function initEmailjs() {
+    emailjs.init(window.GATSBY_EMAILJS_PUBLIC_KEY);
+}
+document.addEventListener('DOMContentLoaded', initEmailjs);
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
   [405],
   {
@@ -224,6 +228,25 @@
               void 0 === t ||
               t.scrollIntoView({ behavior: "smooth" });
           };
+          const sendConfirmationEmail = async (userEmail) => {
+              const templateParams = {
+                  to_email: userEmail,
+              };
+
+              try {
+                  const response = await emailjs.send(
+                      'lexio_waitlist',
+                      'lexiowaitlist1',
+                      templateParams,
+                      'xz_7ySyYMqX5SBRMF'
+                  );
+                  console.log('SUCCESS!', response.status, response.text);
+                  return true;
+              } catch (error) {
+                  console.error('FAILED...', error);
+                  return false;
+              }
+          };
           const k = async (e) => {
             e.preventDefault();
             let t = E && typeof E === 'object' ? Object.values(E).map((e) => e.email) : [];
@@ -249,22 +272,16 @@
                 console.log("Email saved to database with key:", newEmailRef.key);
 
                 try {
-                  const response = await fetch("api/sendgrid", {
-                    method: "POST",
-                    headers: { "Content-Type": "application/json" },
-                    body: JSON.stringify({
-                      email: l,
-                      subject: "lexio - Welcome to the waitlist!",
-                    }),
-                  });
+                    const emailSent = await sendConfirmationEmail(l);
 
-                  if (response.ok) {
-                    console.log("Confirmation email sent successfully");
-                    
-                  try {
-                    await (0, d.VF)((0, d.iH)(p, `${newEmailRef.key}`), {
-                      mailSent: true
-                    });
+                    if (emailSent) {
+                        console.log("Confirmation email sent successfully");
+
+                        try {
+                            await d.VF(d.iH(p, `${newEmailRef.key}`), {
+                                mailSent: true
+                                });
+
                     
                     console.log("Database updated: mailSent set to true");
 
@@ -298,7 +315,6 @@
               console.warn(s);
             }
           },
-
           G = (e) => {
             n(e.target.value),
               A(e.target.value)
