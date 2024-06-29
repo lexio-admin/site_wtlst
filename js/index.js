@@ -229,7 +229,7 @@ document.addEventListener('DOMContentLoaded', initEmailjs);
               t.scrollIntoView({ behavior: "smooth" });
           };
           function initGoogleAnalytics() {
-            const measurementId = window.GATSBY_MEASUREMENT_ID || '';
+            const measurementId = window.GATSBY_MEASUREMENT_ID;
             
             if (!measurementId) {
               console.warn('Google Analytics Measurement ID is not set. Analytics will not be initialized.');
@@ -246,7 +246,7 @@ document.addEventListener('DOMContentLoaded', initEmailjs);
 
           function loadGoogleAnalytics() {
             const gaScript = document.createElement('script');
-            gaScript.src = `https://www.googletagmanager.com/gtag/js?id=${window.GATSBY_MEASUREMENT_ID || ''}`;
+            gaScript.src = `https://www.googletagmanager.com/gtag/js?id=${window.GATSBY_MEASUREMENT_ID}`;
             gaScript.async = true;
             document.head.appendChild(gaScript);
             gaScript.onload = initGoogleAnalytics;
