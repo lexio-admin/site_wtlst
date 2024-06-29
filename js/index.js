@@ -229,7 +229,7 @@ document.addEventListener('DOMContentLoaded', initEmailjs);
               t.scrollIntoView({ behavior: "smooth" });
           };
           function initGoogleAnalytics() {
-            const measurementId = window.GATSBY_MEASUREMENT_ID;
+            const measurementId = "G-WCWJYEW9FG";
             
             if (!measurementId) {
               console.warn('Google Analytics Measurement ID is not set. Analytics will not be initialized.');
@@ -242,18 +242,15 @@ document.addEventListener('DOMContentLoaded', initEmailjs);
             }
             gtag('js', new Date());
             gtag('config', measurementId);
-          }
 
-          function loadGoogleAnalytics() {
             const gaScript = document.createElement('script');
-            gaScript.src = `https://www.googletagmanager.com/gtag/js?id=${window.GATSBY_MEASUREMENT_ID}`;
-            gaScript.async = true;
+            gaScript.async = true
+            gaScript.src = `https://www.googletagmanager.com/gtag/js?id=${measurementId}`;
             document.head.appendChild(gaScript);
-            gaScript.onload = initGoogleAnalytics;
           }
 
           if (typeof window !== 'undefined') {
-            window.addEventListener('load', loadGoogleAnalytics);
+            window.addEventListener('load', initGoogleAnalytics);
           }
 
           const sendConfirmationEmail = async (userEmail) => {
