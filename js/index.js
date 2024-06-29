@@ -251,6 +251,8 @@ document.addEventListener('DOMContentLoaded', initEmailjs);
 
           if (typeof window !== 'undefined') {
             window.addEventListener('load', initGoogleAnalytics);
+          } else {
+            console.warn('Google Analytics not loaded: window undefined')
           }
 
           const sendConfirmationEmail = async (userEmail) => {
