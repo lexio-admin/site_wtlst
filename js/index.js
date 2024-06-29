@@ -228,6 +228,34 @@ document.addEventListener('DOMContentLoaded', initEmailjs);
               void 0 === t ||
               t.scrollIntoView({ behavior: "smooth" });
           };
+          function initGoogleAnalytics() {
+            const measurementId = window.GATSBY_MEASUREMENT_ID || '';
+            
+            if (!measurementId) {
+              console.warn('Google Analytics Measurement ID is not set. Analytics will not be initialized.');
+              return;
+            }
+
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+              dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+            gtag('config', measurementId);
+          }
+
+          function loadGoogleAnalytics() {
+            const gaScript = document.createElement('script');
+            gaScript.src = `https://www.googletagmanager.com/gtag/js?id=${window.GATSBY_MEASUREMENT_ID || ''}`;
+            gaScript.async = true;
+            document.head.appendChild(gaScript);
+            gaScript.onload = initGoogleAnalytics;
+          }
+
+          if (typeof window !== 'undefined') {
+            window.addEventListener('load', loadGoogleAnalytics);
+          }
+
           const sendConfirmationEmail = async (userEmail) => {
               const templateParams = {
                   to_email: userEmail,
@@ -645,22 +673,6 @@ document.addEventListener('DOMContentLoaded', initEmailjs);
             (0, s.jsx)("div", {
               className: "flex justify-center font-[inter] bg-opacity-60 z-10",
               children: (0, s.jsx)(b, {}),
-            }),
-            (0, s.jsx)(w(), {
-              async: !0,
-              src: `https://www.googletagmanager.com/gtag/js?id=${window.GATSBY_MEASUREMENT_ID || ''}`,
-            }),
-            (0, s.jsx)(w(), {
-              id: "google-analytics",
-              strategy: "afterInteractive",
-              dangerouslySetInnerHTML: {
-                __html: `
-                window.dataLayer = window.dataLayer || []; 
-                function gtag(){dataLayer.push(arguments)};
-                gtag('js', new Date());
-                gtag('config', '${window.GATSBY_MEASUREMENT_ID || ''}');
-                `
-              }
             }),
           ],
         });
