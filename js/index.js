@@ -209,7 +209,7 @@ document.addEventListener('DOMContentLoaded', initEmailjs);
           t = (0, a.useRef)(null),
           [l, n] = (0, a.useState)(""),
           [x, m] = (0, a.useState)(
-            "bg-transparent w-full lg:w-2/3 text-xl sm:text-4xl font-medium text-[#9ca3af80] placeholder-[#9ca3af60]"
+            "bg-transparent w-full lg:w-2/3 text-xl sm:text-4xl font-medium text-[#9ca3af97] placeholder-[#9ca3af60]"
           ),
           [u, f] = (0, a.useState)("opacity-0 -translate-x-8"),
           [b, y] = (0, a.useState)(""),
@@ -336,7 +336,7 @@ document.addEventListener('DOMContentLoaded', initEmailjs);
               console.log("Email submission processed successfully");
               n("");
               v(true);
-              m("bg-transparent w-fit h-full text-xl sm:text-4xl font-semibold text-[#9ca3af80] placeholder-[#262626] m:0");
+              m("bg-transparent w-fit h-full text-xl sm:text-4xl font-semibold text-[#9ca3af97] placeholder-[#262626] m:0");
             } catch (s) {
               console.error("Error processing email submission:", s);
               console.warn(s);
@@ -396,7 +396,7 @@ document.addEventListener('DOMContentLoaded', initEmailjs);
                       children: "Intelligent Transcriptions.",
                     }),
                     (0, s.jsx)("p", {
-                      className: "text-[#9CA3AF80] inline text-opacity-50",
+                      className: "text-[#9ca3af97] inline text-opacity-50",
                       children:
                         "Lexio's advanced technology ensures accurate transcriptions, saving you time and effort.",
                     }),
@@ -410,7 +410,7 @@ document.addEventListener('DOMContentLoaded', initEmailjs);
                       children: "Easy Editing.",
                     }),
                     (0, s.jsx)("p", {
-                      className: "text-[#9CA3AF80] inline text-opacity-50",
+                      className: "text-[#9ca3af97] inline text-opacity-50",
                       children:
                         "Customize your transcriptions effortlessly with our user-friendly editing tools.",
                     }),
@@ -423,7 +423,7 @@ document.addEventListener('DOMContentLoaded', initEmailjs);
                       children: "Ready-to-Use Components.",
                     }),
                     (0, s.jsx)("p", {
-                      className: "text-[#9CA3AF80] inline text-opacity-50",
+                      className: "text-[#9ca3af97] inline text-opacity-50",
                       children:
                         "Let AI help your study with easy and intuitive tools.",
                     }),
@@ -575,7 +575,7 @@ document.addEventListener('DOMContentLoaded', initEmailjs);
                                   "Congratulations!",
                                   " ",
                                   (0, s.jsx)("span", {
-                                    className: "text-[#9ca3af80]",
+                                    className: "text-[#9ca3af97]",
                                     children: " You're in",
                                   }),
                                 ],
