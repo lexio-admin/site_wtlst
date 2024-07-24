@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', initEmailjs);
                     children: [
                       (0, s.jsx)("p", {
                         className: "font-semibold w-full",
-                        children: "\xa92024 Lexio Inc.",
+                        children: "2024 Lexio",
                       }),
                       (0, s.jsx)(n(), {
                         className: "mt-4 sm:mt-0",
