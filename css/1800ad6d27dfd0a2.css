@@ -7,16 +7,5 @@
   z-index: -1;
   transition: all 1s;
   background-color: #fff;
-  background-image: radial-gradient(
-      at 40% 20%,
-      rgba(255, 184, 122, 0.22) 0,
-      transparent 70%
-    ),
-    radial-gradient(at 80% 0, rgba(31, 221, 255, 0.21) 0, transparent 70%),
-    radial-gradient(at 0 50%, rgba(255, 219, 222, 0.22) 0, transparent 70%),
-    radial-gradient(at 80% 50%, rgba(255, 133, 173, 0.22) 0, transparent 70%),
-    radial-gradient(at 0 100%, rgba(255, 181, 138, 0.22) 0, transparent 70%),
-    radial-gradient(at 80% 100%, rgba(105, 102, 255, 0.22) 0, transparent 70%),
-    radial-gradient(at 0 0, rgba(255, 133, 167, 0.22) 0, transparent 70%);
-  opacity: 0.22;
+  opacity: 1;
 }
