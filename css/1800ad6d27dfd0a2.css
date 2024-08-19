@@ -9,3 +9,32 @@
   background-color: #fff;
   opacity: 1;
 }
+
+/* ============================== */
+/* ========= SCROLLBAR ========= */
+/* ============================== */
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+    margin-top: 7px;
+    margin-bottom: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #d4d4d4;
+    border-radius: 10px;
+    border: 3px solid #f1f1f1; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #b5b5b5;
+}
+
+::-webkit-scrollbar-button {
+    display: none;
+}
