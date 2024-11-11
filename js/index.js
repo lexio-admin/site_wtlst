@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', initEmailjs);
                           type: "button",
                           href: "mailto:support@lexio.me?body=Ciao! I'm interested in Lexio.",
                           className:
-                            "bg-lexioGray p-3 rounded-xl bg-opacity-50 flex justify-center items-center aspect-square",
+                            "bg-LexioGray p-3 rounded-xl bg-opacity-50 flex justify-center items-center aspect-square",
                           target: "_blank",
                           rel: "noopener noreferrer",
                           title: "Lexio's Email",
@@ -80,9 +80,9 @@ document.addEventListener('DOMContentLoaded', initEmailjs);
                         }),
                         (0, s.jsx)("a", {
                           type: "button",
-                          href: "https://www.instagram.com/lexioapp/",
+                          href: "https://www.instagram.com/Lexioapp/",
                           className:
-                            "bg-lexioGray p-3 rounded-xl flex justify-center items-center aspect-square bg-opacity-50",
+                            "bg-LexioGray p-3 rounded-xl flex justify-center items-center aspect-square bg-opacity-50",
                           target: "_blank",
                           rel: "noopener noreferrer",
                           title: "Lexio's Instagram",
@@ -90,9 +90,9 @@ document.addEventListener('DOMContentLoaded', initEmailjs);
                         }),
                         (0, s.jsx)("a", {
                           type: "button",
-                          href: "https://x.com/lexio_app",
+                          href: "https://x.com/Lexio_app",
                           className:
-                            "bg-lexioGray p-3 rounded-xl flex justify-center items-center aspect-square bg-opacity-50",
+                            "bg-LexioGray p-3 rounded-xl flex justify-center items-center aspect-square bg-opacity-50",
                           target: "_blank",
                           rel: "noopener noreferrer",
                           title: "Lexio's X",
@@ -148,7 +148,7 @@ document.addEventListener('DOMContentLoaded', initEmailjs);
                       (0, s.jsx)("p", {
                         href: "#",
                         className: "font-bold text-xl ml-3 focus:outline-none",
-                        children: "lexio",
+                        children: "Lexio",
                       }),
                     ],
                   }),
@@ -156,13 +156,13 @@ document.addEventListener('DOMContentLoaded', initEmailjs);
                     className: "flex justify-end",
                     children: (0, s.jsx)("button", {
                       className:
-                        "bg-lexioGray py-3 px-5 rounded-full font-medium bg-opacity-50 text-sm focus:outline-none transition-all duration-200 ease-linear hover:text-[#404040] hover:bg-[#f0f0f0]",
+                        "bg-LexioGray py-3 px-5 rounded-full font-medium bg-opacity-50 text-sm focus:outline-none transition-all duration-200 ease-linear hover:text-[#404040] hover:bg-[#f0f0f0]",
                       onClick: e.refDiv
                         ? l
                         : () => {
                             t.push("/#");
                           },
-                      children: (0, s.jsx)("p", { children: "get lexio" }),
+                      children: (0, s.jsx)("p", { children: "get Lexio" }),
                     }),
                   }),
                 ],
@@ -194,7 +194,7 @@ document.addEventListener('DOMContentLoaded', initEmailjs);
       let u = (0, x.ZF)({
           apiKey: m.env.GATSBY_API_KEY,
           authDomain: m.env.GATSBY_AUTH_DOMAIN,
-          databaseURL: "https://lexio-waitlist-default-rtdb.europe-west1.firebasedatabase.app",
+          databaseURL: "https://Lexio-waitlist-default-rtdb.europe-west1.firebasedatabase.app",
           projectId: m.env.GATSBY_PROJECT_ID,
           storageBucket: m.env.GATSBY_STORAGE_BUCKET,
           messagingSenderId: m.env.GATSBY_MESSAGING_SENDER_ID,
@@ -262,8 +262,8 @@ document.addEventListener('DOMContentLoaded', initEmailjs);
 
               try {
                   const response = await emailjs.send(
-                      'lexio_waitlist',
-                      'lexiowaitlist1',
+                      'Lexio_waitlist',
+                      'Lexiowaitlist1',
                       templateParams,
                       'xz_7ySyYMqX5SBRMF'
                   );
@@ -347,7 +347,7 @@ document.addEventListener('DOMContentLoaded', initEmailjs);
               A(e.target.value)
                 ? (f("opacity-100 -translate-x-0"),
                   y("pr-12 bg-gradient-to-r from-[#eec0a950] to-[#e2b0c050]"))
-                : (f("opacity-0 -translate-x-8"), y("pr-8 bg-lexioGray"));
+                : (f("opacity-0 -translate-x-8"), y("pr-8 bg-LexioGray"));
           },
           A = () => /\S+@\S+\.\S+/.test(l);
         return (0, s.jsxs)("main", {
@@ -375,13 +375,13 @@ document.addEventListener('DOMContentLoaded', initEmailjs);
               children: [
                 "Lexio helps people studying, allowing them to",
                 (0, s.jsx)("br", {}),
-                "improve their methos and boosting their results.",
+                "improve their methods and boosting their results.",
               ],
             }),
             (0, s.jsxs)("button", {
               onClick: S,
               className:
-                "mt-6 bg-lexioGray py-3 px-5 rounded-full font-medium text-sm inline-flex items-center mb-16 md:mb-20 bg-opacity-50 focus:outline-none hover:bg-[#EEEEEE] hover:text-[#404040] transition-all duration-200 ease-linear",
+                "mt-6 bg-LexioGray py-3 px-5 rounded-full font-medium text-sm inline-flex items-center mb-16 md:mb-20 bg-opacity-50 focus:outline-none hover:bg-[#EEEEEE] hover:text-[#404040] transition-all duration-200 ease-linear",
               children: ["Explore ", (0, s.jsx)(r.m, { className: "ml-2" })],
             }),
             (0, s.jsx)("div", { ref: e }),
@@ -444,12 +444,12 @@ document.addEventListener('DOMContentLoaded', initEmailjs);
                   children: [
                     (0, s.jsxs)("div", {
                       className:
-                        "transform-gpu transition-all hover:scale-95 bg-lexioGray w-full h-auto bg-opacity-50 rounded-2xl py-8 grid place-items-center mb-5 px-8",
+                        "transform-gpu transition-all hover:scale-95 bg-LexioGray w-full h-auto bg-opacity-50 rounded-2xl py-8 grid place-items-center mb-5 px-8",
                       children: [
                         (0, s.jsx)("p", {
                           className:
                             "font-semibold text-lg sm:text-lg md:text-xl lg:text-2xl xl:text-3xl w-full pb-5",
-                          children: "Bring lexio everywhere on every device",
+                          children: "Bring Lexio everywhere on every device",
                         }),
                         (0, s.jsx)("p", {
                           className:
@@ -469,7 +469,7 @@ document.addEventListener('DOMContentLoaded', initEmailjs);
                     }),
                     (0, s.jsxs)("div", {
                       className:
-                        "transform-gpu transition-all hover:scale-95 bg-lexioGray w-full h-auto bg-opacity-50 rounded-2xl py-8 grid place-items-center mb-3 px-8",
+                        "transform-gpu transition-all hover:scale-95 bg-LexioGray w-full h-auto bg-opacity-50 rounded-2xl py-8 grid place-items-center mb-3 px-8",
                       children: [
                         (0, s.jsx)("p", {
                           className:
@@ -487,7 +487,7 @@ document.addEventListener('DOMContentLoaded', initEmailjs);
                     }),
                     (0, s.jsxs)("div", {
                       className:
-                        "transform-gpu transition-all hover:scale-95 bg-lexioGray w-full h-auto bg-opacity-50 rounded-2xl py-8 grid place-items-center mb-3 px-8",
+                        "transform-gpu transition-all hover:scale-95 bg-LexioGray w-full h-auto bg-opacity-50 rounded-2xl py-8 grid place-items-center mb-3 px-8",
                       children: [
                         (0, s.jsx)("p", {
                           className:
@@ -509,7 +509,7 @@ document.addEventListener('DOMContentLoaded', initEmailjs);
                   className: "flex flex-col w-full h-auto m-0",
                   children: (0, s.jsxs)("div", {
                     className:
-                      "transform-gpu transition-all hover:scale-95 bg-lexioGray w-full h-full bg-opacity-50 sm:h-full rounded-2xl py-8 flex flex-col mb-3 px-8",
+                      "transform-gpu transition-all hover:scale-95 bg-LexioGray w-full h-full bg-opacity-50 sm:h-full rounded-2xl py-8 flex flex-col mb-3 px-8",
                     children: [
                       (0, s.jsxs)("p", {
                         className:
@@ -549,7 +549,7 @@ document.addEventListener('DOMContentLoaded', initEmailjs);
                 (0, s.jsx)("p", {
                   className:
                     "font-bold text-2xl sm:text-3xl md:text-4xl lg:text-6xl xl:text-6xl text-transparent bg-clip-text bg-gradient-to-r from-[#eec0a9] via-[#d5b0c0] to-[#baafc3] ",
-                  children: "Join lexio.",
+                  children: "Join Lexio.",
                 }),
                 (0, s.jsx)("p", {
                   className:
@@ -586,11 +586,11 @@ document.addEventListener('DOMContentLoaded', initEmailjs);
                             type: "button",
                             href: "../comingsoon.html",
                             className:
-                              "max-w-max outline-none sm:w-1/4 flex justify-center mt-6 bg-lexioGray py-3 px-6 rounded-full size-4xl font-medium items-center mb-16 md:mb-20 bg-opacity-50 hover:bg-[#EEEEEE] hover:text-[#555555] transition-all duration-200 ease-linear cursor-pointer",
+                              "max-w-max outline-none sm:w-1/4 flex justify-center mt-6 bg-LexioGray py-3 px-6 rounded-full size-4xl font-medium items-center mb-16 md:mb-20 bg-opacity-50 hover:bg-[#EEEEEE] hover:text-[#555555] transition-all duration-200 ease-linear cursor-pointer",
                             rel: "noopener noreferrer",
                             children: (0, s.jsx)("p", {
                               className: "text-[#000000]",
-                              children: "Go to lexio! \uD83D\uDE80",
+                              children: "Go to Lexio! \uD83D\uDE80",
                             }),
                           }),
                         ],
@@ -612,7 +612,7 @@ document.addEventListener('DOMContentLoaded', initEmailjs);
                           }),
                           (0, s.jsxs)("button", {
                             className:
-                              "relative outline-none flex justify-center mt-6 bg-lexioGray py-3 px-8 rounded-full font-semibold items-center mb-16 md:mb-20 bg-opacity-50 hover:bg-[#EEEEEE] hover:text-[#555555] transition-all duration-200 ease-linear ".concat(
+                              "relative outline-none flex justify-center mt-6 bg-LexioGray py-3 px-8 rounded-full font-semibold items-center mb-16 md:mb-20 bg-opacity-50 hover:bg-[#EEEEEE] hover:text-[#555555] transition-all duration-200 ease-linear ".concat(
                                 b
                               ),
                             disabled: j,
@@ -648,7 +648,7 @@ document.addEventListener('DOMContentLoaded', initEmailjs);
           children: [
             (0, s.jsxs)(j(), {
               children: [
-                (0, s.jsx)("title", { children: "lexio" }),
+                (0, s.jsx)("title", { children: "Lexio" }),
                 (0, s.jsx)("meta", {
                   name: "description",
                   content:
@@ -657,14 +657,14 @@ document.addEventListener('DOMContentLoaded', initEmailjs);
                 (0, s.jsx)("meta", {
                   name: "keywords",
                   content:
-                    "lexio, lexioapp, education, study, studying, class, school, transcription, flashcard",
+                    "Lexio, Lexioapp, education, study, studying, class, school, transcription, flashcard",
                 }),
                 (0, s.jsx)("link", {
                   rel: "canonical",
                   href: "https://lexio.me/privacy",
                 }),
-                (0, s.jsx)("meta", { name: "author", content: "lexio" }),
-                (0, s.jsx)("meta", { name: "publisher", content: "lexio" }),
+                (0, s.jsx)("meta", { name: "author", content: "Lexio" }),
+                (0, s.jsx)("meta", { name: "publisher", content: "Lexio" }),
               ],
             }),
             (0, s.jsx)(n.Z, {}),

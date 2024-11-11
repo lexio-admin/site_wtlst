@@ -573,7 +573,7 @@ video {
 .bg-transparent {
   background-color: transparent;
 }
-.bg-lexioGray {
+.bg-LexioGray {
   --tw-bg-opacity: 1;
   background-color: rgb(217 217 217 / var(--tw-bg-opacity));
 }
