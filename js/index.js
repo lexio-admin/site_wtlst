@@ -584,7 +584,7 @@ document.addEventListener('DOMContentLoaded', initEmailjs);
                           }),
                           (0, s.jsx)("a", {
                             type: "button",
-                            href: "../comingsoon.html",
+                            href: "https://app.lexio.me",
                             className:
                               "max-w-max outline-none sm:w-1/4 flex justify-center mt-6 bg-LexioGray py-3 px-6 rounded-full size-4xl font-medium items-center mb-16 md:mb-20 bg-opacity-50 hover:bg-[#EEEEEE] hover:text-[#555555] transition-all duration-200 ease-linear cursor-pointer",
                             rel: "noopener noreferrer",
