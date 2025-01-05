@@ -1,6 +1,9 @@
 function initEmailjs() {
     emailjs.init(window.GATSBY_EMAILJS_PUBLIC_KEY);
 }
+const handleGetLexioClick = () => {
+  window.location.href = 'https://app.lexio.me';
+}
 document.addEventListener('DOMContentLoaded', initEmailjs);
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
   [405],
@@ -157,12 +160,8 @@ document.addEventListener('DOMContentLoaded', initEmailjs);
                     children: (0, s.jsx)("button", {
                       className:
                         "bg-LexioGray py-3 px-5 rounded-full font-medium bg-opacity-50 text-sm focus:outline-none transition-all duration-200 ease-linear hover:text-[#404040] hover:bg-[#f0f0f0]",
-                      onClick: e.refDiv
-                        ? l
-                        : () => {
-                            t.push("/#");
-                          },
-                      children: (0, s.jsx)("p", { children: "get Lexio" }),
+                      onClick: handleGetLexioClick,
+                      children: (0, s.jsx)("p", { children: "Get Lexio" }),
                     }),
                   }),
                 ],
@@ -539,99 +538,6 @@ document.addEventListener('DOMContentLoaded', initEmailjs);
                       }),
                     ],
                   }),
-                }),
-              ],
-            }),
-            (0, s.jsxs)("div", {
-              className: "w-full",
-              ref: t,
-              children: [
-                (0, s.jsx)("p", {
-                  className:
-                    "font-bold text-2xl sm:text-3xl md:text-4xl lg:text-6xl xl:text-6xl text-transparent bg-clip-text bg-gradient-to-r from-[#eec0a9] via-[#d5b0c0] to-[#baafc3] ",
-                  children: "Join Lexio.",
-                }),
-                (0, s.jsx)("p", {
-                  className:
-                    "my-5 mb-8 xl:mb-16 font-regular sm:text-xl lg:text-2xl xl:text-2xl",
-                  children:
-                    "We are currently developing our first beta release for the public. Meanwhile, you can join our waitlist and follow us on our social networks.",
-                }),
-                (0, s.jsx)("form", {
-                  className: "flex flex-col",
-                  onSubmit: k,
-                  noValidate: !0,
-                  children: j
-                    ? (0, s.jsxs)("div", {
-                        children: [
-                          (0, s.jsx)("div", {
-                            className: "flex space-between justify-start w-fit",
-                            children: (0, s.jsx)(g.Z, {
-                              springConfig: g.u.wobbly,
-                              children: (0, s.jsxs)("p", {
-                                className:
-                                  "text-xl sm:text-4xl font-medium text-transparent bg-clip-text bg-gradient-to-r from-[#eec0a9] via-[#d5b0c0] to-[#baafc3] mr-1 leading-normal h-full pb-1 ",
-                                children: [
-                                  "Congratulations!",
-                                  " ",
-                                  (0, s.jsx)("span", {
-                                    className: "text-[#9ca3af97]",
-                                    children: " You're in",
-                                  }),
-                                ],
-                              }),
-                            }),
-                          }),
-                          (0, s.jsx)("a", {
-                            type: "button",
-                            href: "https://app.lexio.me",
-                            className:
-                              "max-w-max outline-none sm:w-1/4 flex justify-center mt-6 bg-LexioGray py-3 px-6 rounded-full size-4xl font-medium items-center mb-16 md:mb-20 bg-opacity-50 hover:bg-[#EEEEEE] hover:text-[#555555] transition-all duration-200 ease-linear cursor-pointer",
-                            rel: "noopener noreferrer",
-                            children: (0, s.jsx)("p", {
-                              className: "text-[#000000]",
-                              children: "Go to Lexio! \uD83D\uDE80",
-                            }),
-                          }),
-                        ],
-                      })
-                    : (0, s.jsxs)("div", {
-                        children: [
-                          (0, s.jsx)("input", {
-                            type: "email",
-                            placeholder: "Enter your email",
-                            onChange: G,
-                            disabled: j,
-                            value: l,
-                            className:
-                              x +
-                              " outline-none leading-normal h-full transition-all duration-200 ease-linear " +
-                              w,
-                            spellCheck: "false",
-                            onAnimationEnd: () => N("animate-none"),
-                          }),
-                          (0, s.jsxs)("button", {
-                            className:
-                              "relative outline-none flex justify-center mt-6 bg-LexioGray py-3 px-8 rounded-full font-semibold items-center mb-16 md:mb-20 bg-opacity-50 hover:bg-[#EEEEEE] hover:text-[#555555] transition-all duration-200 ease-linear ".concat(
-                                b
-                              ),
-                            disabled: j,
-                            children: [
-                              (0, s.jsx)("p", {
-                                className: "",
-                                children: "Get early access ",
-                              }),
-                              (0, s.jsx)("p", {
-                                className:
-                                  "absolute top-0 right-0 -translate-x-[20px] translate-y-[14px] transition-all duration-150 ease-linear ml-3 ".concat(
-                                    u
-                                  ),
-                                children: (0, s.jsx)(o.U, { size: 20 }),
-                              }),
-                            ],
-                          }),
-                        ],
-                      }),
                 }),
               ],
             }),
