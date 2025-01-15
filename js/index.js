@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', initEmailjs);
                     children: [
                       (0, s.jsx)("p", {
                         className: "font-semibold w-full",
-                        children: "Lexio 2024",
+                        children: "Lexio 2025",
                       }),
                       (0, s.jsx)(n(), {
                         className: "mt-4 sm:mt-0",
@@ -254,101 +254,7 @@ document.addEventListener('DOMContentLoaded', initEmailjs);
             console.warn('Google Analytics not loaded: window undefined')
           }
 
-          const sendConfirmationEmail = async (userEmail) => {
-              const templateParams = {
-                  to_email: userEmail,
-              };
-
-              try {
-                  const response = await emailjs.send(
-                      'Lexio_waitlist',
-                      'Lexiowaitlist1',
-                      templateParams,
-                      'xz_7ySyYMqX5SBRMF'
-                  );
-                  console.log('SUCCESS!', response.status, response.text);
-                  return true;
-              } catch (error) {
-                  console.error('FAILED...', error);
-                  return false;
-              }
-          };
-          const k = async (e) => {
-            e.preventDefault();
-            let t = E && typeof E === 'object' ? Object.values(E).map((e) => e.email) : [];
-
-            if (!A()) {
-              N("animate-none");
-              N("animate-[shake_0.25s_ease-in-out_0s]");
-              return false;
-            }
-
-            N("animate-none");
-
-            try {
-              if (!t.includes(l)) {
-                console.log("Saving new email:", l);
-                
-                const newEmailRef = await (0, d.VF)((0, d.iH)(p, "/"), {
-                  email: l,
-                  date: new Date().toISOString().split("T")[0],
-                  mailSent: false,
-                });
-
-                console.log("Email saved to database with key:", newEmailRef.key);
-
-                try {
-                    const emailSent = await sendConfirmationEmail(l);
-
-                    if (emailSent) {
-                        console.log("Confirmation email sent successfully");
-
-                        try {
-                            await d.VF(d.iH(p, `${newEmailRef.key}`), {
-                                mailSent: true
-                                });
-
-                    
-                    console.log("Database updated: mailSent set to true");
-
-                    const updatedSnapshot = await (0, d.c)((0, d.iH)(p, `${newEmailRef.key}`));
-                    const updatedData = updatedSnapshot.val();
-                    console.log("Updated data in database:", updatedData);
-
-                    if (updatedData.mailSent !== true) {
-                      console.error("Failed to update mailSent in database");
-                    }
-                  } catch (updateError) {
-                    console.error("Error updating database:", updateError);
-                  }
-                  
-                  } else {
-                    console.error("Failed to send confirmation email");
-                  }
-                } catch (emailError) {
-                  console.error("Error sending email:", emailError);
-                }
-              } else {
-                console.log("Email already exists, not saving:", l);
-              }
-
-              console.log("Email submission processed successfully");
-              n("");
-              v(true);
-              m("bg-transparent w-fit h-full text-xl sm:text-4xl font-semibold text-[#9ca3af97] placeholder-[#262626] m:0");
-            } catch (s) {
-              console.error("Error processing email submission:", s);
-              console.warn(s);
-            }
-          },
-          G = (e) => {
-            n(e.target.value),
-              A(e.target.value)
-                ? (f("opacity-100 -translate-x-0"),
-                  y("pr-12 bg-gradient-to-r from-[#eec0a950] to-[#e2b0c050]"))
-                : (f("opacity-0 -translate-x-8"), y("pr-8 bg-LexioGray"));
-          },
-          A = () => /\S+@\S+\.\S+/.test(l);
+          
         return (0, s.jsxs)("main", {
           className: "max-w-[1100px] p-5 md:p-8 lg:p-12",
           children: [
@@ -392,12 +298,12 @@ document.addEventListener('DOMContentLoaded', initEmailjs);
                   children: [
                     (0, s.jsx)("p", {
                       className: "text-[#262626] inline mr-1",
-                      children: "Intelligent Transcriptions.",
+                      children: "Intelligent Study Documents.",
                     }),
                     (0, s.jsx)("p", {
                       className: "text-[#9ca3af97] inline text-opacity-50",
                       children:
-                        "Lexio's advanced technology ensures accurate transcriptions, saving you time and effort.",
+                        "Lexio's advanced technology ensures accurate summaries, multiple-choice questions, and flashcards, saving you time and effort.",
                     }),
                   ],
                 }),
@@ -411,7 +317,7 @@ document.addEventListener('DOMContentLoaded', initEmailjs);
                     (0, s.jsx)("p", {
                       className: "text-[#9ca3af97] inline text-opacity-50",
                       children:
-                        "Customize your transcriptions effortlessly with our user-friendly editing tools.",
+                        "Customize your documents effortlessly with our user-friendly editing tools.",
                     }),
                   ],
                 }),
@@ -473,13 +379,13 @@ document.addEventListener('DOMContentLoaded', initEmailjs);
                         (0, s.jsx)("p", {
                           className:
                             "font-semibold text-lg sm:text-lg md:text-xl lg:text-2xl xl:text-3xl w-full pb-5",
-                          children: "Enhance your learning experience",
+                          children: "Let AI help you",
                         }),
                         (0, s.jsxs)("p", {
                           className:
                             "font-regular text-sm sm:text-sm md:text-md lg:text-lg xl:text-lg w-full text-[#6B7280]",
                           children: [
-                            "Adopt effective study habits with Lexio. Get personalized tips to improve your academic performance and transform your study routine.",
+                            "Unlock personalized study aids with our AI engine. Get instant summaries, quiz-style questions, and custom flashcards to elevate your learning experience. Lexio's AI engine is designed to help you study smarter, not harder.",
                           ],
                         }),
                       ],
@@ -491,13 +397,13 @@ document.addEventListener('DOMContentLoaded', initEmailjs);
                         (0, s.jsx)("p", {
                           className:
                             "font-semibold text-lg sm:text-lg md:text-xl lg:text-2xl xl:text-3xl w-full pb-5",
-                          children: "Let AI help you",
+                          children: "Chat with AI",
                         }),
                         (0, s.jsxs)("p", {
                           className:
                             "font-regular text-sm sm:text-sm md:text-md lg:text-lg xl:text-lg w-full text-[#6B7280]",
                           children: [
-                            "Harness AI for enhanced study sessions. Lexio generates questions, transcriptions, and flashcards automatically, boosting learning efficiency.",
+                            "Struggling to comprehend a text? Don't let confusion hold you back! Simply ask our AI Chat for assistance, and it will expertly guide you through the problem, helping you understand even the most complex materials.",
                           ],
                         }),
                       ],
@@ -519,7 +425,7 @@ document.addEventListener('DOMContentLoaded', initEmailjs);
                         className:
                           "font-regular text-sm sm:text-sm md:text-md lg:text-lg xl:text-lg w-full text-[#6B7280]",
                         children: [
-                          "Lexio automatically saves your notes and transcriptions in the cloud, so you can access them anytime, anywhere.",
+                          "Lexio automatically saves your notes and transcriptions in the cloud, so you can access them anytime, anywhere. Use Lexio's file management system to organize your notes and keep your study materials in order.",
                         ],
                       }),
                       (0, s.jsxs)("p", {
@@ -538,6 +444,37 @@ document.addEventListener('DOMContentLoaded', initEmailjs);
                       }),
                     ],
                   }),
+                }),
+              ],
+            }),
+            (0, s.jsxs)("div", {
+              className: "w-full",
+              ref: t,
+              children: [
+                (0, s.jsx)("p", {
+                  className:
+                    "font-bold text-2xl sm:text-3xl md:text-4xl lg:text-6xl xl:text-6xl text-transparent bg-clip-text bg-gradient-to-r from-[#eec0a9] via-[#d5b0c0] to-[#baafc3] ",
+                  children: "Join Lexio.",
+                }),
+                (0, s.jsx)("p", {
+                  className:
+                    "my-5 mb-8 xl:mb-16 font-regular sm:text-xl lg:text-2xl xl:text-2xl",
+                  children:
+                    "We are currently developing our first beta release for the public. Meanwhile, you can follow us on our social networks.",
+                }),
+                (0, s.jsx)("div", {
+                  children:
+                    (0, s.jsx)("a", {
+                      type: "button",
+                      href: "https://app.lexio.me",
+                      className:
+                        "w-full outline-none sm:w-1/4 flex justify-center mt-6 bg-LexioGray py-3 px-6 rounded-full size-4xl font-medium items-center mb-16 md:mb-20 bg-opacity-50 hover:bg-[#EEEEEE] hover:text-[#555555] transition-all duration-200 ease-linear cursor-pointer",
+                      rel: "noopener noreferrer",
+                      children: (0, s.jsx)("p", {
+                        className: "text-[#000000]",
+                        children: "Go to Lexio! \uD83D\uDE80",
+                      }),
+                    })
                 }),
               ],
             }),
