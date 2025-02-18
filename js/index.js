@@ -5,6 +5,36 @@ const handleGetLexioClick = () => {
   window.location.href = 'https://app.lexio.me';
 }
 document.addEventListener('DOMContentLoaded', initEmailjs);
+
+function initGoogleAnalytics() {
+    const measurementId = "G-WCWJYEW9FG";
+
+    if (!measurementId) {
+      console.warn('Google Analytics Measurement ID is not set. Analytics will not be initialized.');
+      return;
+    }
+
+    if (typeof window === 'undefined')
+    {
+        console.warn('Google Analytics not loaded: window undefined')
+        return;
+    }
+
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', measurementId);
+
+    const gaScript = document.createElement('script');
+    gaScript.async = true
+    gaScript.src = `https://www.googletagmanager.com/gtag/js?id=${measurementId}`;
+    document.head.appendChild(gaScript);
+  }
+document.addEventListener('DOMContentLoaded', initGoogleAnalytics);
+
+
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
   [405],
   {
@@ -61,7 +91,12 @@ document.addEventListener('DOMContentLoaded', initEmailjs);
                       (0, s.jsx)(n(), {
                         href: "../terms.html",
                         title: "terms and conditions",
-                        children: "Term of use",
+                        children: "Terms of use",
+                      }),
+                      (0, s.jsx)(n(), {
+                        href: "../contactPage.html",
+                        title: "contact us",
+                        children: "Contact us",
                       }),
                     ],
                   }),
@@ -159,9 +194,12 @@ document.addEventListener('DOMContentLoaded', initEmailjs);
                     className: "flex justify-end",
                     children: (0, s.jsx)("button", {
                       className:
-                        "bg-gradient-to-r from-[#eec0a9] via-[#d5b0c0] to-[#baafc3] py-3 px-5 rounded-full font-medium text-sm focus:outline-none transition-all duration-200 ease-linear hover:from-[#f0c8b3] hover:via-[#d9b8c6] hover:to-[#c0b5ca]",
+                        "bg-gradient-to-r from-[#eec0a9] via-[#d5b0c0] to-[#baafc3] py-3 px-5 rounded-full font-medium text-sm focus:outline-none transition-all duration-200 ease-linear hover:from-[#f0c8b3] hover:via-[#d9b8c6] hover:to-[#c0b5ca] flex items-center",  // Added flex and items-center
                       onClick: handleGetLexioClick,
-                      children: (0, s.jsx)("p", { children: "Get Lexio 🡥" }),
+                      children: [
+                        (0, s.jsx)("p", { children: "Get Lexio" }),
+                        (0, s.jsx)("svg", { xmlns: "http://www.w3.org/2000/svg", width: "24", height: "24", className: "ml-2", children: (0, s.jsx)("path", { d: "M7 7h8.586L5.293 17.293l1.414 1.414L17 8.414V17h2V5H7v2z" }) })
+                      ]
                     }),
                   }),
                 ],
@@ -227,34 +265,7 @@ document.addEventListener('DOMContentLoaded', initEmailjs);
               void 0 === t ||
               t.scrollIntoView({ behavior: "smooth" });
           };
-          function initGoogleAnalytics() {
-            const measurementId = "G-WCWJYEW9FG";
-            
-            if (!measurementId) {
-              console.warn('Google Analytics Measurement ID is not set. Analytics will not be initialized.');
-              return;
-            }
 
-            window.dataLayer = window.dataLayer || [];
-            function gtag() {
-              dataLayer.push(arguments);
-            }
-            gtag('js', new Date());
-            gtag('config', measurementId);
-
-            const gaScript = document.createElement('script');
-            gaScript.async = true
-            gaScript.src = `https://www.googletagmanager.com/gtag/js?id=${measurementId}`;
-            document.head.appendChild(gaScript);
-          }
-
-          if (typeof window !== 'undefined') {
-            window.addEventListener('load', initGoogleAnalytics);
-          } else {
-            console.warn('Google Analytics not loaded: window undefined')
-          }
-
-          
         return (0, s.jsxs)("main", {
           className: "max-w-[1100px] p-5 md:p-8 lg:p-12",
           children: [

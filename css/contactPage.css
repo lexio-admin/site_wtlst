@@ -1,0 +1,156 @@
+:root {
+    /* Light Theme Colors */
+    --color-primary: #0077B6;
+    --color-secondary: #015170;
+    --color-accent: #78b2d2;
+    --color-bgColor: #F0F1F3;
+    --color-red: #D25E47;
+    --color-darkRed: #b04c38;
+    --color-blackGray: #262626;
+    --color-darkGray: #9CA3AF;
+    --color-mediumGray: #D9D9D9;
+    --color-lightGray: #ddd;
+}
+
+:root::-webkit-scrollbar {
+    display: none;
+}
+
+#contactsPage {
+    width: calc(100% - 32px);
+    height: calc(100vh - 32px);
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    overflow-y: auto;
+    align-items: center;
+}
+
+#contactsPage::-webkit-scrollbar {
+    display: none;
+}
+
+.contact-container {
+    max-width: 800px;
+}
+
+.contact-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.contact-header h1 {
+    color: var(--color-blackGray);
+    margin-bottom: 16px;
+}
+
+.contact-header p {
+    color: var(--color-blackGray);
+}
+
+.contact-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 40px;
+}
+
+.contact-form-section, .contact-direct-email {
+    background: white;
+    padding: 32px;
+    border-radius: 16px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.1);
+}
+
+.contact-form-group {
+    margin-bottom: 24px;
+}
+
+.contact-label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--color-blackGray);
+    font-weight: bold;
+}
+
+.contact-input, .contact-textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid var(--color-lightGray);
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.contact-input:focus, .contact-textarea:focus {
+    outline: none;
+    border-color: var(--color-primary);
+}
+
+.contact-textarea {
+    height: 152px;
+    resize: vertical;
+}
+
+#contact-form .contact-button {
+    background-color: var(--color-primary);
+    color: white;
+    padding: 16px 24px;
+    border: none;
+    border-radius: 16px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+#contactsPage .contact-direct-email .contact-button{
+    background-color: var(--color-primary);
+    color: white;
+    padding: 16px 24px;
+    border: none;
+    border-radius: 16px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.contact-button:hover {
+    background-color: var(--color-secondary);
+}
+
+.contact-direct-email {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.p-text-contact-page {
+    text-align: left;
+    margin-left: 5px;
+}
+
+.contact-direct-email h2 {
+    color: var(--color-blackGray);
+    margin-bottom: 10px;
+}
+
+.contact-direct-email p {
+    margin-bottom: 8px;
+    color: var(--color-darkGray);
+}
+
+.contact-additional-info {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.contact-additional-info h2 {
+    color: var(--color-blackGray);
+}
+
+.contact-additional-info p {
+    margin-bottom: 8px;
+    color: var(--color-darkGray);
+}
