@@ -8,4 +8,7 @@
   transition: all 1s;
   background-color: #fff;
   opacity: 1;
+  background-color: white; /* White background */
+  background-image: radial-gradient(circle, #dadada 1px, transparent 1px); /* Gray points */
+  background-size: 20px 20px; /* Spacing between points */
 }
