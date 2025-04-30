@@ -2,7 +2,7 @@ function initEmailjs() {
     emailjs.init(window.GATSBY_EMAILJS_PUBLIC_KEY);
 }
 const handleGetLexioClick = () => {
-  window.location.href = 'https://app.lexio.me';
+  window.location.href = 'https://app.lexioai.it';
 }
 document.addEventListener('DOMContentLoaded', initEmailjs);
 
@@ -108,7 +108,7 @@ document.addEventListener('DOMContentLoaded', initGoogleAnalytics);
                       children: [
                         (0, s.jsx)("a", {
                           type: "button",
-                          href: "mailto:support@lexio.me?body=Ciao! I'm interested in Lexio.",
+                          href: "mailto:support@lexioai.it?body=Ciao! I'm interested in Lexio.",
                           className:
                             "bg-LexioGray p-3 rounded-xl bg-opacity-50 flex justify-center items-center aspect-square",
                           target: "_blank",
@@ -477,7 +477,7 @@ document.addEventListener('DOMContentLoaded', initGoogleAnalytics);
                   children:
                     (0, s.jsx)("a", {
                       type: "button",
-                      href: "https://app.lexio.me",
+                      href: "https://app.lexioai.it",
                       className:
                         "w-full outline-none sm:w-1/4 flex justify-center mt-6 bg-gradient-to-r from-[#eec0a9] via-[#d5b0c0] to-[#baafc3] py-3 px-6 rounded-full size-4xl font-medium items-center mb-16 md:mb-20 hover:from-[#f0c8b3] hover:via-[#d9b8c6] hover:to-[#c0b5ca] transition-all duration-200 ease-linear cursor-pointer",
                       rel: "noopener noreferrer",
@@ -515,7 +515,7 @@ document.addEventListener('DOMContentLoaded', initGoogleAnalytics);
                 }),
                 (0, s.jsx)("link", {
                   rel: "canonical",
-                  href: "https://lexio.me/privacy",
+                  href: "https://lexioai.it/privacy",
                 }),
                 (0, s.jsx)("meta", { name: "author", content: "Lexio" }),
                 (0, s.jsx)("meta", { name: "publisher", content: "Lexio" }),
